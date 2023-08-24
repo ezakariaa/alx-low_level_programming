@@ -5,7 +5,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdarg.h>
-
 /**
  * struct list_s - singly linked list
  * @str: string - (malloc'ed string)
@@ -16,12 +15,10 @@
  */
 typedef struct list_s
 {
-    char *str;
-    unsigned int len;
-    struct list_s *next;
+	char *str;
+	unsigned int len;
+	struct list_s *next;
 } list_t;
-
-
 
 int _strlen(char *s);
 int _putchar(char c);

@@ -1,11 +1,10 @@
 #include <stdio.h>
 
-void __attribute__((constructor)) _print(void);
-
 /**
-* __print - Prints a string before the main function is executed.
+* _print - Prints a message before the main function is executed.
 *
-* Return: void.
+* This function is marked with __attribute__((constructor)),
+* which means it will be executed automatically before the main function.
 */
 void _print(void)
 {

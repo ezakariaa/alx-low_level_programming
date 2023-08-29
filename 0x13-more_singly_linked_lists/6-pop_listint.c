@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
-* pop_listint: pops off the head of the list and returns its contents.
+* pop_listint - pops off the head of the list and returns its contents.
 * @head: head of the list
 * Return: contents of head
 */

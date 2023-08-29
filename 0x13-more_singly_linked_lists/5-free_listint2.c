@@ -4,22 +4,19 @@
 /**
 * free_listint2 - Function that frees a listint_t list.
 * @head: Pointer to the head of the listint_t list.
-* 
-* Description: iThe function sets the head to NULL
 */
 void free_listint2(listint_t **head)
 {
-	listint_t *temp;
-
-	while (*head)
-	{
-		temp = (*head)->next;
-		free(*head);
-		*head = temp;
-	}
+	listint_t *temp, *current;
 
 	if (head == NULL)
 		return;
-
+	current = *head;
+	while (current != NULL)
+	{
+		temp = current;
+		current = current->next;
+		free(temp);
+	}
 	*head = NULL;
 }

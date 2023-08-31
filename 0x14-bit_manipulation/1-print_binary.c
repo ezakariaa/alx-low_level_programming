@@ -3,6 +3,7 @@
 
 /**
 * print_binary - prints the binary representation of a number.
+* @n : where b is pointing to a string of 0 and 1 chars
 * not allowed to use arrays
 * not allowed to use malloc
 * not allowed to use the % or / operators

@@ -3,15 +3,13 @@
 #include "lists.h"
 
 /**
-* insert_dnodeint_at_index - Inserts a new node at a given position.
-*
+* insert_dnodeint_at_index - Inserts a new node at a given position
 * @h: the beginning of the linked list
 * @idx: index for insert the new node
 * @n: to enter into new node
 *
 * Return : the address of the new node, or NULL if it failed
 */
-
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *trav, *newnode;

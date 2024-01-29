@@ -1,13 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
-
-#include <stdlib.h>
-
-/*
- * File: main.h
- * Desc: Header file contains all the function prototypes
- *
- */
+#ifndef _MAIN_H_
+#define _MAIN_H_
 
 int _putchar(char c);
 int _islower(int c);
@@ -30,4 +22,4 @@ unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
 
-#endif
+#endif /*_MAIN_H_*/

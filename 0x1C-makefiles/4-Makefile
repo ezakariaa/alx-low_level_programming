@@ -1,19 +1,34 @@
-CC=gcc
-SRC=main.c main.c
-OBJ=$(SRC:%.c=%.o)
-NAME=school
-RM=rm -f
-CFLAGS=-Wall -Werror -Wextra -pedantic
+# Makefile complet avec drapeaux du compilateur et nettoyage
 
-all: $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+# Compilateur
+CC = gcc
+# Fichiers sources
+SRC = main.c school.c
+# Fichiers objets générés à partir des fichiers sources
+OBJ = $(SRC:.c=.o)
+# Nom de l'exécutable
+NAME = school
+# Commande pour supprimer des fichiers
+RM = rm -f
+# Drapeaux du compilateur pour la génération du code
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME) $(CFLAGS)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(RM) *~ $(NAME)
+	$(RM) *~ $(NAME) $(OBJ)
 
 oclean:
 	$(RM) $(OBJ)
 
-fclean: clean oclean
+fclean: clean
 
-re: oclean all
+re: fclean all
+
+.PHONY: all clean fclean oclean re
